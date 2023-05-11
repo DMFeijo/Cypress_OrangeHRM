@@ -4,9 +4,9 @@ describe('Login', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
     //Verificar se a imagem esta presente na tela 
-    cy.get('.orangehrm-login-branding').should('be.visible')
+    cy.get('.orangehrm-login-branding > img').should('be.visible')
   });
-  it.only('Login com sucesso', () => {
+  it('Login com sucesso', () => {
 
     cy.login()
 
